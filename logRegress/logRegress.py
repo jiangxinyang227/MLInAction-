@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 
 
-filename = './testSet.txt'
+filename = './data/testSet.txt'
 
 
 def loadDataSet(filename):
@@ -182,8 +182,8 @@ def dataNorm(dataSet):
 
 
 def train():
-    testData, testLabels = loadDataSet('./horseColicTest.txt')
-    trainData, trainLabels = loadDataSet('./horseColicTraining.txt')
+    testData, testLabels = loadDataSet('./data/horseColicTest.txt')
+    trainData, trainLabels = loadDataSet('./data/horseColicTraining.txt')
     trainNorm = dataNorm(trainData)
     testNorm = dataNorm(testData)
     maxCycles = 1000
